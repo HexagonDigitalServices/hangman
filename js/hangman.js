@@ -145,6 +145,14 @@ function startTimer() {
   }, 1000);
 }
 
+// Listen for keydown events to capture keyboard typing
+document.addEventListener('keydown', function(event) {
+  const letter = event.key.toLowerCase();  // Get the pressed key
+  if (/[a-z]/.test(letter) && !guessed.includes(letter)) { // Check if it's a letter and hasn't been guessed
+    handleGuess(letter); // Call the guess handler
+  }
+});
+
 // Initialize game
 document.getElementById('maxWrong').innerText = maxWrong;
 randomWord();
