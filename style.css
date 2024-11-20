@@ -1,0 +1,166 @@
+/* Global Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  body {
+    background: #f8f9fa;
+    font-family: Arial, sans-serif;
+    padding: 0;
+  }
+  
+  /* Word Display */
+  .word-display {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+    margin-bottom: 1rem;
+    word-wrap: break-word; /* Prevent long words from overflowing */
+    white-space: nowrap; /* Keeps text in one line */
+  }
+  
+  /* Buttons */
+  #keyboard button {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  #keyboard button.correct {
+    background-color: #28a745 !important;
+    color: white;
+  }
+  
+  #keyboard button.wrong {
+    background-color: #dc3545 !important;
+    color: white;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Ensures images are block elements, preventing them from extending horizontally */
+  }
+  
+  #hintText {
+    font-size: 1rem;
+    color: #6c757d;
+  }
+  
+  /* Prevent Image Overflow */
+  #hangmanPic {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Prevent Horizontal Scrolling */
+  .container, .row {
+    overflow-x: hidden; /* Make sure no overflow horizontally */
+    width: 100%; /* Ensure it does not exceed the screen width */
+  }
+  
+  /* Adjustments for smaller screens */
+  @media (max-width: 768px) {
+    /* Word Spotlight */
+    .word-display {
+      font-size: 1.6rem;
+    }
+  
+    /* Button adjustments */
+    #keyboard button {
+      width: 40px;
+      height: 40px;
+      font-size: 1rem;
+    }
+  
+    /* Adjust Hangman Image */
+    #hangmanPic {
+      max-width: 100%;
+      height: auto;
+      max-height: 200px;
+    }
+  
+    /* Adjust the text for Game Info */
+    .row p {
+      font-size: 1rem;
+    }
+  
+    /* Scoreboard Layout */
+    .row {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    /* Increase Button Size */
+    .btn {
+      font-size: 1.1rem;
+      padding: 10px 20px;
+    }
+  
+    /* Make Keyboard Layout More Compact */
+    #keyboard {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    /* Ensure content fits inside container */
+    .container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  
+    /* Ensure no overflow */
+    html, body {
+      overflow-x: hidden;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .word-display {
+      font-size: 1.4rem;
+    }
+  
+    /* Button size on mobile */
+    #keyboard button {
+      width: 35px;
+      height: 35px;
+      font-size: 1rem;
+    }
+  
+    /* Adjust the Timer font size */
+    #timer {
+      font-size: 1.5rem;
+    }
+  
+    /* Make Hangman Image even smaller on small screens */
+    #hangmanPic {
+      max-width: 80%;
+      height: auto;
+      max-height: 150px;
+    }
+  
+    /* Ensure no horizontal scrolling */
+    html, body {
+      overflow-x: hidden;
+    }
+  
+    /* Ensure buttons are properly spaced */
+    #keyboard {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  
+    /* Increase button font size for touch targets */
+    .btn {
+      font-size: 1.2rem;
+      padding: 10px 20px;
+    }
+  }
+  

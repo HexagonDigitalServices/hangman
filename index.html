@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Bootstrap 4 CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <title>Enhanced Hangman Game</title>
+</head>
+<body>
+  <div class="container my-4">
+    <h1 class="text-center display-4">Hangman</h1>
+
+    <!-- Hangman Image -->
+    <div class="text-center mb-4">
+      <img id="hangmanPic" class="img-fluid rounded shadow" src="./images/0.jpg" alt="Hangman">
+    </div>
+
+    <!-- Game Info -->
+    <div class="row">
+      <div class="col-6 text-left">
+        <p><strong>Wrong Guesses:</strong> <span id="mistakes">0</span> of <span id="maxWrong"></span></p>
+      </div>
+      <div class="col-6 text-right">
+        <p><strong>Timer:</strong> <span id="timer">60</span> seconds</p>
+      </div>
+    </div>
+
+    <!-- Word Spotlight -->
+    <div class="row">
+      <div class="col-12 text-center">
+        <p class="lead">Guess the Programming Language:</p>
+        <p id="wordSpotlight" class="word-display"></p>
+        <button id="hintBtn" class="btn btn-info mb-3" onclick="showHint()">Get a Hint</button>
+        <p id="hintText" class="text-muted"></p>
+      </div>
+    </div>
+
+    <!-- Keyboard -->
+    <div id="keyboard" class="d-flex flex-wrap justify-content-center mb-3"></div>
+
+    <!-- Reset Button -->
+    <div class="text-center">
+      <button class="btn btn-warning px-5" onClick="reset()">Reset</button>
+    </div>
+
+    <!-- Scoreboard -->
+    <div class="row mt-4">
+      <div class="col-6">
+        <p><strong>Wins:</strong> <span id="wins">0</span></p>
+      </div>
+      <div class="col-6 text-right">
+        <p><strong>Losses:</strong> <span id="losses">0</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confetti JS -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti"></script>
+  <script src="./js/hangman.js"></script>
+</body>
+</html>
